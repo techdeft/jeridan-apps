@@ -17,8 +17,8 @@ return new class extends Migration
              $table->unsignedBigInteger('lawyer_id');
             $table->timestamps();
 
-             $table->foreign('case_id')->references('id')->on('casses')->onDelete('restricted');
-             $table->foreign('lawyer_id')->references('id')->on('lawyers')->onDelete('restricted');
+             $table->foreign('case_id')->references('id')->on('casses')->onDelete('RESTRICT');
+             $table->foreign('lawyer_id')->references('id')->on('lawyers')->onDelete('RESTRICT');
         });
     }
 

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('path');
             $table->timestamps();
 
-            $table->foreign('kyc_id')->references('id')->on('kyc')->onDelete('cascade');
+            $table->foreign('kyc_id')->references('id')->on('kycs')->onDelete('RESTRICT');
         });
     }
 

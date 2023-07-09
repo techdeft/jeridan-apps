@@ -20,10 +20,10 @@ return new class extends Migration
             $table->boolean('status');
             $table->timestamps();
 
-            $table->foreign('case_id')->references('id')->on('casses')->onDelete('restricted');
-            $table->foreign('lawyer_id')->references('id')->on('lawyers')->onDelete('restricted');
-             $table->foreign('payment_method')->references('id')->on('payment_methods')->onDelete('restricted');
-            $table->foreign('payment_details')->references('id')->on('payment_details')->onDelete('restricted');
+            $table->foreign('case_id')->references('id')->on('casses')->onDelete('RESTRICT');
+            $table->foreign('lawyer_id')->references('id')->on('lawyers')->onDelete('RESTRICT');
+             $table->foreign('payment_method')->references('id')->on('payment_methods')->onDelete('RESTRICT');
+            $table->foreign('payment_details')->references('id')->on('payment_details')->onDelete('RESTRICT');
         });
     }
 

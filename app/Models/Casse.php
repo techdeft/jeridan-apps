@@ -18,6 +18,8 @@ class Casse extends Model
         'description',
         'category_id',
         'status',
+        'user_status',
+        'reason'
          
     ];
 

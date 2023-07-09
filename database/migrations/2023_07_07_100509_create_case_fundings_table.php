@@ -17,7 +17,7 @@ return new class extends Migration
             $table->float('amount');
             $table->timestamps();
 
-            $table->foreign('case_id')->references('id')->on('casses')->onDelete('restricted');
+            $table->foreign('case_id')->references('id')->on('casses')->onDelete('RESTRICT');
         });
     }
 

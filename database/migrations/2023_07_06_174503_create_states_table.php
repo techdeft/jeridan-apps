@@ -18,7 +18,7 @@ return new class extends Migration
             $table->timestamps();
 
             
- $table->foreign('country_id')->references('id')->on('countries')->onDelete('restricted');
+ $table->foreign('country_id')->references('id')->on('countries')->onDelete('RESTRICT');
         });
     }
 

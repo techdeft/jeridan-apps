@@ -19,11 +19,13 @@ return new class extends Migration
             $table->longtext('description');
             $table->unsignedBigInteger('category_id');
             $table->tinyInteger('status')->comment('0=>pending, 1=>active, 2=>clossed');
-             $table->timestamps();
+            $table->boolean('user_status')->default(true);
+            $table->string('reason')->nullable();
+            $table->timestamps();
 
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('restricted ');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('RESTRICT ');
        
         });
     }
